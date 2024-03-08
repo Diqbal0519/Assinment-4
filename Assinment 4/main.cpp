@@ -35,7 +35,33 @@ public:
     void input(string& first_name, string& last_name, int& Z_number, int& grades);
     
     //computes the student’s total grade
+    void totalGrade(int grades, double& total_grade);
     
+    //computes the student’s final letter grade
+    void finalGrade(double total_grade, char& final_letter_grade);
+    
+    //output function which outputs information of any student
+    void output(int Z_number, int grades);
+};
+
+class Spring24: public COP3014{
+private:
+    int lab_grade;
+public:
+    //constructor
+    Spring24(string first_name, string last_name, int Z_number, int grades, int lab_grade);
+    
+    //setter
+    void set(string first_name, string last_name, int Z_number, int grades, int lab_grade);
+    
+    //input function that asks the user for student's name, Z-number, and grades, including lab grade
+    void input(string& first_name, string& last_name, int& Z_number, int& grades, int lab_grade);
+    
+    //computes the student’s total grade
+    void totalGrade(int grades, double& total_grades, int lab_grade);
+    
+    //output function which outputs information of any student
+    void output(int Z_number, int grades, int lab_grade);
 };
 
 
@@ -43,3 +69,4 @@ int main() {
     cout << "Hello, World!\n";
     return 0;
 }
+
