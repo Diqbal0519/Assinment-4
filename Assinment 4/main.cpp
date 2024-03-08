@@ -10,12 +10,12 @@ using namespace std;
 
 class COP3014{
 private:
-    string first_name;
-    string last_name;
-    int Z_number;
-    int grades;
-    double total_grade;
-    char final_letter_grade;
+    string firstName;
+    string lastName;
+    int ZNumber;
+    int Grades;
+    double totalGrade;
+    char letterGrade;
 public:
     //constructors
     COP3014(string first_name, string last_name, int Z_number, int grades);
@@ -32,13 +32,13 @@ public:
     void set();
     
     //input function that asks the user for student's name, Z-number and grades
-    void input(string& first_name, string& last_name, int& Z_number, int& grades);
+    void input(string& firstName, string& lastName, int& ZNumber, int& Grades);
     
     //computes the student’s total grade
-    void totalGrade(int grades, double& total_grade);
+    void total_grade(int grades, double& totalGrade);
     
     //computes the student’s final letter grade
-    void finalGrade(double total_grade, char& final_letter_grade);
+    void finalGrade(double total_grade, char& letterGrade);
     
     //output function which outputs information of any student
     void output(int Z_number, int grades);
@@ -46,7 +46,7 @@ public:
 
 class Spring24: public COP3014{
 private:
-    int lab_grade;
+    int labGrade;
 public:
     //constructor
     Spring24(string first_name, string last_name, int Z_number, int grades, int lab_grade);
@@ -55,10 +55,10 @@ public:
     void set(string first_name, string last_name, int Z_number, int grades, int lab_grade);
     
     //input function that asks the user for student's name, Z-number, and grades, including lab grade
-    void input(string& first_name, string& last_name, int& Z_number, int& grades, int lab_grade);
+    void input(string& firstName, string& lastName, int& ZNumber, int& Grades, int labGrade);
     
     //computes the student’s total grade
-    void totalGrade(int grades, double& total_grades, int lab_grade);
+    void totalGrade(int grades, double& totalGrades, int lab_grade);
     
     //output function which outputs information of any student
     void output(int Z_number, int grades, int lab_grade);
@@ -70,3 +70,24 @@ int main() {
     return 0;
 }
 
+COP3014::COP3014(string first_name, string last_name, int Z_number, int grades){
+    firstName = first_name;
+    lastName = last_name;
+    ZNumber = Z_number;
+    Grades = grades;
+}
+
+COP3014::COP3014(string first_name, string last_name, int Z_number){
+    firstName = first_name;
+    lastName = last_name;
+    ZNumber = Z_number;
+}
+
+COP3014::COP3014(string first_name, string last_name){
+    firstName = first_name;
+    lastName = last_name;
+}
+
+COP3014::COP3014(string first_name){
+    firstName = first_name;
+}
