@@ -1,3 +1,10 @@
+/*
+ COP3014: Programmming II
+ Assignment 4 - creating a program that generates total grade and letter grade for students. Use of classes and inheritence
+ Duha Iqbal
+ 03/15/2024
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -102,23 +109,29 @@ public:
 
 
 int main() {
-    char repeat, type;
-    do{
-        cout << "Is the student apart of Spring 24?(y or n): ";
-        cin >> type;
-        if(type == 'N' || type == 'n'){
-            COP3014 student;
-            student.input();
-            student.output(student);
-        }else if(type == 'Y' || type == 'y'){
-            Spring24 student_lab;
-            student_lab.input_with_lab();
-            student_lab.output_with_lab(student_lab);
-        }
-        cout << "Do you want to calculate another students grade?(y or n): ";
-        cin >> repeat;
-    }while(repeat == 'Y' || repeat == 'y');
-    return 0;
+    //test constructors
+    COP3014 student("duha", "iqbal", 23713121);
+    Spring24 student1(12345678);
+    
+    //test setters
+    student1.set_first_name("luna");
+    student1.set_last_name("Johnson");
+    student1.set_Znumber(87654321);
+    
+    //test getters
+    cout << "COP3014:" <<endl;
+    cout << student.get_first_name() << student.get_last_name() << "-" << student.get_Znumber() << endl;
+    cout << "Spring24:" << endl;
+    cout << student1.get_first_name() << student1.get_last_name() << "-" << student1.get_Znumber() << endl;
+    
+    //test input,total grade, letter grade, and output funtion
+    COP3014 student2;
+    student2.input();
+    student2.output(student2);
+    
+    Spring24 student3;
+    student3.input_with_lab();
+    student3.output_with_lab(student3);
 }
 
 COP3014::COP3014(string user_first, string user_last, int user_Znumber){
