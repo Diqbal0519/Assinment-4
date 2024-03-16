@@ -109,25 +109,30 @@ public:
 
 
 int main() {
-    //test constructors
+    /*test constructors
     COP3014 student("duha", "iqbal", 23713121);
     Spring24 student1(12345678);
+    */
     
-    //test setters
+    /*test setters
     student1.set_first_name("luna");
     student1.set_last_name("Johnson");
     student1.set_Znumber(87654321);
+    */
     
-    //test getters
+    /*test getters
     cout << "COP3014:" <<endl;
-    cout << student.get_first_name() << student.get_last_name() << "-" << student.get_Znumber() << endl;
+    cout << student.get_first_name() << student.get_last_name() << "-" << student.get_Znumber() << endl << endl;
     cout << "Spring24:" << endl;
-    cout << student1.get_first_name() << student1.get_last_name() << "-" << student1.get_Znumber() << endl;
+    cout << student1.get_first_name() << student1.get_last_name() << "-" << student1.get_Znumber() << endl << endl;
+    */
     
     //test input,total grade, letter grade, and output funtion
     COP3014 student2;
     student2.input();
     student2.output(student2);
+    
+    cout << endl;
     
     Spring24 student3;
     student3.input_with_lab();
